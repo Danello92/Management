@@ -1,0 +1,221 @@
+body {
+  background-color: lightslategrey;
+  overflow: visible;
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  background-color: lightslategrey;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  height: 100%;
+  width: 100%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 30%;
+          flex: 1 1 30%;
+  z-index: -1;
+}
+
+.container-header {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  font-family: 'Inconsolata', monospace;
+  font-size: 1rem;
+  padding: 2.5em;
+}
+
+.container-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  list-style-type: none;
+  background-color: linen;
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  position: static;
+}
+
+.container-list .element-list {
+  margin: 0;
+}
+
+.container-list ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-transition: background-color 2s;
+  transition: background-color 2s;
+  padding: 4rem;
+  background-color: linen;
+  font-size: 1.25em;
+}
+
+.container-list ul:hover {
+  background-color: lightskyblue;
+  color: white;
+}
+
+.container-list ul:hover a:visited {
+  color: white;
+}
+
+.container-list a:link {
+  text-decoration: none;
+}
+
+.container-list a:visited {
+  color: black;
+}
+
+.main-content {
+  background-color: black;
+  background-image: url("https://images.pexels.com/photos/2387877/pexels-photo-2387877.jpeg?");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  height: 90vh;
+  width: 100%;
+}
+
+.gallery-aside {
+  height: 400px;
+}
+
+.sun-block {
+  width: 150px;
+  height: 150px;
+  background-color: lightyellow;
+  -webkit-animation-name: example-sun;
+          animation-name: example-sun;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  position: absolute;
+  margin: -10px;
+  border-radius: 50% 50% 50% 50%;
+  top: -190px;
+  left: 500px;
+  z-index: 999;
+}
+
+.lake {
+  background: -webkit-gradient(linear, left bottom, left top, from(#0f73e3), to(#091c79));
+  background: linear-gradient(0deg, #0f73e3 0%, #091c79 100%);
+  width: auto;
+  height: 200px;
+}
+
+.mountain, small {
+  background: -webkit-gradient(linear, left top, right top, from(#020024), color-stop(26%, #091c79), color-stop(42%, #07145c), to(#8a8ab1));
+  background: linear-gradient(90deg, #020024 0%, #091c79 26%, #07145c 42%, #8a8ab1 100%);
+  width: 600px;
+  height: 600px;
+  -webkit-clip-path: polygon(51% 28%, 71% 49%, 77% 65%, 86% 76%, 100% 100%, 0 100%, 3% 62%, 14% 33%, 37% 8%, 53% 13%);
+          clip-path: polygon(51% 28%, 71% 49%, 77% 65%, 86% 76%, 100% 100%, 0 100%, 3% 62%, 14% 33%, 37% 8%, 53% 13%);
+  -webkit-animation-name: example_mountain;
+          animation-name: example_mountain;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  position: absolute;
+  bottom: -120px;
+  left: -20px;
+}
+
+.small {
+  -webkit-clip-path: polygon(66% 50%, 90% 28%, 97% 43%, 100% 75%, 100% 100%, 0 100%, 14% 79%, 33% 54%, 45% 59%);
+          clip-path: polygon(66% 50%, 90% 28%, 97% 43%, 100% 75%, 100% 100%, 0 100%, 14% 79%, 33% 54%, 45% 59%);
+  background: -webkit-gradient(linear, right top, left top, from(#020024), color-stop(26%, #091c79), color-stop(42%, #07145c), to(#8a8ab1));
+  background: linear-gradient(-90deg, #020024 0%, #091c79 26%, #07145c 42%, #8a8ab1 100%);
+  position: absolute;
+  height: 300px;
+  width: 800px;
+  left: 440px;
+  bottom: -100px;
+}
+
+@-webkit-keyframes example-sun {
+  from {
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px);
+  }
+  to {
+    -webkit-transform: translateY(300px);
+            transform: translateY(300px);
+  }
+}
+
+@keyframes example-sun {
+  from {
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px);
+  }
+  to {
+    -webkit-transform: translateY(300px);
+            transform: translateY(300px);
+  }
+}
+
+@-webkit-keyframes example_mountain {
+  from {
+    -webkit-transform: translateY(100px);
+            transform: translateY(100px);
+  }
+  to {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+  }
+}
+
+@keyframes example_mountain {
+  from {
+    -webkit-transform: translateY(100px);
+            transform: translateY(100px);
+  }
+  to {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+  }
+}
+
+@keyframes example_mountain {
+  from {
+    -webkit-transform: translateY(100px);
+            transform: translateY(100px);
+  }
+  to {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+  }
+}
+
+@media (max-width: 1100px) {
+  .container {
+    display: block;
+  }
+}
+/*# sourceMappingURL=style.css.map */

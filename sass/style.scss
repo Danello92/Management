@@ -1,0 +1,146 @@
+$firstColor:linen;
+$secondColor:lightskyblue;
+
+body{
+    background-color: lightslategrey;
+    overflow: visible;
+    padding:0;
+    margin:0;
+  }
+//header
+
+.container{
+    
+    background-color: lightslategrey;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    height: 100%;
+    width: 100%;
+    flex: 1 1 30%;
+    z-index: -1;
+
+}
+.container-header{
+    
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-family: 'Inconsolata', monospace;
+    font-size: 1rem;
+    padding: 2.5em;
+    
+}
+.container-list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style-type: none;
+    background-color:$firstColor;
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    position:static;
+.element-list{
+    margin:0;
+}
+    ul{
+    display: flex;
+    align-items: stretch;
+    transition: background-color 2s;
+    padding:4rem;
+    background-color:$firstColor;
+    font-size: 1.25em;
+    }
+    ul:hover{
+        background-color:$secondColor;
+        color:white;
+        a:visited{
+            color:white;
+        }
+    }
+    a:link{
+        text-decoration: none;
+    }
+    a:visited{
+        color:black;
+       
+    }
+}
+//main
+.main-content{
+    background-color: black;
+    background-image: url('https://images.pexels.com/photos/2387877/pexels-photo-2387877.jpeg?');
+    background-size:cover;
+    background-repeat:no-repeat;
+    // background-attachment: fixed;
+    position: relative;
+    height: 90vh;
+    width: 100%;
+}
+.gallery-aside{
+    height: 400px;
+}
+
+.sun-block {
+    width: 150px;
+    height: 150px;
+    background-color: lightyellow;
+    animation-name: example-sun;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+    position: absolute;
+    margin: -10px;
+    border-radius:50% 50% 50% 50%;
+    top: -190px;        
+    left: 500px;
+    z-index: 999;
+  
+}
+.lake{
+    background: linear-gradient(0deg, rgba(15,115,227,1) 0%, rgba(9,28,121,1) 100%);
+    width: auto;
+    height: 200px;
+}
+.mountain, small{
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,28,121,1) 26%, rgba(7,20,92,1) 42%, rgba(138,138,177,1) 100%);
+    width: 600px;
+    height: 600px;
+    clip-path: polygon(51% 28%, 71% 49%, 77% 65%, 86% 76%, 100% 100%, 0 100%, 3% 62%, 14% 33%, 37% 8%, 53% 13%);
+    animation-name:  example_mountain ;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+    position: absolute;
+    bottom: -120px;        
+    left: -20px;
+ 
+}
+.small{
+    clip-path: polygon(66% 50%, 90% 28%, 97% 43%, 100% 75%, 100% 100%, 0 100%, 14% 79%, 33% 54%, 45% 59%);
+    background: linear-gradient(-90deg, rgba(2,0,36,1) 0%, rgba(9,28,121,1) 26%, rgba(7,20,92,1) 42%, rgba(138,138,177,1) 100%);
+    position: absolute;
+    height: 300px;
+    width: 800px;
+    left: 440px; 
+    bottom: -100px;       
+    
+}
+
+
+@keyframes example-sun {
+    from {transform: translateY(50px);}
+    to {transform: translateY(300px);}
+  }
+  @keyframes example_mountain {
+    from {transform: translateY(100px);}
+    to {transform: translateY(-10px);}
+  }  @keyframes example_mountain {
+    from {transform: translateY(100px);}
+    to {transform: translateY(-10px);}
+  }
+@media(max-width:1100px) {
+    .container {
+      display: block;
+    }
+}
